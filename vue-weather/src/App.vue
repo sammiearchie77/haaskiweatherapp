@@ -75,14 +75,17 @@ body {
 }
 
 #app {
-  background-image:url('./assets/img/cold-bg.jpeg');
+  background-image:url('./assets/img/dark-bg.jpg');
   background-size: cover;
   background-position: bottom;
   transition: 0.4s;
 }
 
 #app.warm {
-  background-image: url('./assets/img/hot-bg.jpg');
+  background-image: url('./assets/img/warm-bg.jpg');
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s
 }
 
 main {
@@ -163,5 +166,10 @@ main {
   font-weight: 700;
   font-style: italic;
   text-shadow: 3px 6px rgba(0,0,0,0.25);
+}
+
+.footer {
+  background-color: rgb(48, 15, 80);
+  color: bisque;
 }
 </style>
