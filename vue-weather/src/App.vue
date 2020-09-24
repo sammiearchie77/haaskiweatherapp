@@ -1,6 +1,7 @@
 <template>
   <div id="app" :class="typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'warm' : ''">
     <main>
+      <div class="welcome-text"><h1>Chelsea Hoskie weather report</h1></div>
       <div class="search-box">
         <input type="text" class="search-bar" placeholder="search...." v-model="query" @keypress="fetchWeather">
       </div>
@@ -168,8 +169,32 @@ main {
   text-shadow: 3px 6px rgba(0,0,0,0.25);
 }
 
-.footer {
-  background-color: rgb(48, 15, 80);
-  color: bisque;
+.welcome-text {
+  text-align: center;
+  margin: 30px;
+  text-shadow: 3px 6px rgba(0,0,0,0.25);
+  color: #ecf2fd;
+  font-weight: 500;
+}
+
+/* mobile mode  */
+
+@media screen and (max-width: 480px) {
+  body {
+    min-width: 100%;
+  }
+
+  .welcome-text {
+    text-align: center;
+    margin: 30px;
+    text-shadow: 3px 6px rgba(0,0,0,0.25);
+    color: #ecf2fd;
+    font-weight: 300;
+    font-size: 18px;
+  }
+
+  .weather-box .temp {
+    font-size: 30px;
+  }
 }
 </style>
